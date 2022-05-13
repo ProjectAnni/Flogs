@@ -411,6 +411,11 @@ class FLog {
       }
     }
 
+    // Extract exception stacktrace from error
+    if (exception is Error && stacktrace == null) {
+      stacktrace = exception.stackTrace;
+    }
+
     // Generate a custom formatted stack trace
     String? formattedStackTrace;
     if (_config.stackTraceFormatter != null) {
