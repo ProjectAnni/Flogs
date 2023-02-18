@@ -8,7 +8,6 @@ export 'package:f_logs/model/flog/flog_config.dart';
 export 'package:f_logs/model/flog/log.dart';
 export 'package:f_logs/model/flog/log_level.dart';
 export 'package:f_logs/utils/datetime/date_time.dart';
-export 'package:f_logs/utils/encryption/xxtea.dart';
 export 'package:f_logs/utils/filters/filter_type.dart';
 export 'package:f_logs/utils/filters/filters.dart';
 export 'package:f_logs/utils/formatter/field_name.dart';

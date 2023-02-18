@@ -45,19 +45,7 @@ class AppDatabase {
     // Path with the form: /platform-specific-directory/demo.db
     final dbPath = join(appDocumentDir.path, DBConstants.DB_NAME);
 
-    // Check to see if encryption is set, then provide codec
-    // else init normal db with path
-    var database;
-    if (FLog.getDefaultConfigurations().encryptionEnabled &&
-        FLog.getDefaultConfigurations().encryptionKey.isNotEmpty) {
-      // Initialize the encryption codec with a user password
-      var codec = getXXTeaSembastCodec(
-          password: FLog.getDefaultConfigurations().encryptionKey);
-
-      database = await databaseFactoryIo.openDatabase(dbPath, codec: codec);
-    } else {
-      database = await databaseFactoryIo.openDatabase(dbPath);
-    }
+    final database = await databaseFactoryIo.openDatabase(dbPath);
 
     // Any code awaiting the Completer's future will now start executing
     _dbOpenCompleter!.complete(database);

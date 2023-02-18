@@ -56,9 +56,6 @@ class LogsConfig {
   /// Delimiter for CSV files
   String csvDelimiter = "";
 
-  /// Encryption enabled
-  bool encryptionEnabled = false;
-
   /// Encryption Key
   String encryptionKey = "";
 

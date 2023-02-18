@@ -351,14 +351,6 @@ class FLog {
   /// This will apply user provided configurations to FLogs
   static void applyConfigurations(LogsConfig config) {
     _config = config;
-
-    //check to see if encryption is enabled
-    if (_config.encryptionEnabled) {
-      //check to see if encryption key is provided
-      if (_config.encryptionKey.isEmpty) {
-        throw Exception(Constants.EXCEPTION_NULL_KEY);
-      }
-    }
   }
 
   /// getDefaultConfigurations
